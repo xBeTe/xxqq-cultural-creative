@@ -1,0 +1,14 @@
+server:
+  port: 11801
+spring:
+  application:
+    name: xxqq-mall-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: xxz10:8848
+      config:
+        server-addr: xxz10:8848
+        file-extension: yaml
+        group: XXQQ_GROUP
+
