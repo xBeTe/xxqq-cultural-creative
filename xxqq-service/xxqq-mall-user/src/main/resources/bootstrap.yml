@@ -1,0 +1,24 @@
+server:
+  port: 11902
+spring:
+  application:
+    name: xxqq-mall-user
+  cloud:
+    nacos:
+      discovery:
+        server-addr: xxz10:8848
+      config:
+        server-addr: xxz10:8848
+        file-extension: yaml
+        group: XXQQ_GROUP
+        # 共享配置
+        shared-configs:
+          - data-id: xxqq-common-redis.yaml
+            group: XXQQ_GROUP
+            refresh: true
+          - data-id: xxqq-common-base.yaml
+            group: XXQQ_GROUP
+            refresh: true
+          - data-id: xxqq_common_minio.yaml
+            group: XXQQ_GROUP
+            refresh: true

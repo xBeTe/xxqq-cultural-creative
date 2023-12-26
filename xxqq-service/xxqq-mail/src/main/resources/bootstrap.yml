@@ -1,0 +1,19 @@
+server:
+  port: 12001
+spring:
+  application:
+    name: xxqq-mail
+  cloud:
+    nacos:
+      discovery:
+        server-addr: xxz10:8848
+      config:
+        server-addr: xxz10:8848
+        file-extension: yaml
+        group: XXQQ_GROUP
+        # 共享配置
+        shared-configs:
+          - data-id: xxqq-mall-base.yaml
+            group: XXQQ_GROUP
+            refresh: true
+

@@ -1,6 +1,5 @@
 package com.xxz.model.common.dtos;
 
-import com.xxz.model.common.enums.HttpCodeEnum;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -23,8 +22,6 @@ public class ResponseResult implements Serializable {
         this.code = code;
         this.message = message;
     }
-
-
 
 
 

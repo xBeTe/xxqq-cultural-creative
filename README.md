@@ -6,7 +6,7 @@
 
 ### 1. `xxqq-user`：商城用户数据库
 
-- `mall-user`：用户基本信息表
+- `mall_user`：用户基本信息表
 
 ```sql
 create table mall_user
@@ -15,7 +15,7 @@ create table mall_user
         primary key,
     salt             varchar(32)      null comment '密码、通信等加密盐',
     name             varchar(20)      null comment '用户名',
-    password         varchar(256)     null comment '密码,SHA256加密',
+    password         varchar(255)     null comment '加密后的密码',
     phone            varchar(11)      null comment '手机号',
     email            varchar(50)      null comment '邮箱',
     image            varchar(255)     null comment '头像',
@@ -52,11 +52,14 @@ create table mall_user
 
 ### 2. 微服务
 
-| Services | Port  | Description |
-| -------- | ----- | ----------- |
-| user     | 11901 | 用户微服务  |
-| artwork  | 11902 | 作品微服务  |
-| search   | 11903 | 搜索微服务  |
+| Services   | Port  | Description  |
+| ---------- | ----- | ------------ |
+| auth       | 11901 | 认证授权     |
+| mall-user  | 11902 | 商城用户服务 |
+| artwork    | 11903 | 作品服务     |
+| search     | 11904 | 搜索服务     |
+| admin-user | 11905 | 管理员用户   |
+| mail       | 12001 | 邮件服务     |
 
 ## 响应状态码
 
@@ -116,4 +119,14 @@ create table mall_user
 | ARTWORK_NOT_EXIST       | 3502 | 作品不存在   |
 | ARTWORK_SAVE_FAIL       | 3503 | 作品保存失败 |
 | ARTWORK_STATUS_ERROR    | 3504 | 作品状态错误 |
+
+- 邮件发送
+
+| Type                      | Code | Message          |
+| ------------------------- | ---- | ---------------- |
+| MAIL_SEND_FAIL            | 3601 | 邮件发送失败     |
+| MAIL_SEND_TO_REQUIRE      | 3602 | 收件人不能为空   |
+| MAIL_SEND_SUBJECT_REQUIRE | 3603 | 邮件主题不能为空 |
+| MAIL_SEND_CONTENT_REQUIRE | 3604 | 邮件内容不能为空 |
+| MAIL_SEND_TO_INVALID      | 3605 | 收件人格式不正确 |
 

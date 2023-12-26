@@ -1,6 +1,7 @@
 package com.xxz.model.common.dtos;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
 
@@ -8,6 +9,7 @@ import java.io.Serializable;
  * @author xzxie
  * @create 2023/11/6 19:55
  */
+@EqualsAndHashCode(callSuper = true)
 @Data
 public class PageResponseResult<T> extends OkResponseResult<T> implements Serializable {
     private Integer currentPage;

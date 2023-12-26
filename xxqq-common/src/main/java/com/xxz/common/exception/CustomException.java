@@ -10,7 +10,7 @@ import lombok.Getter;
 @Getter
 public class CustomException extends RuntimeException {
 
-    private HttpCodeEnum httpCodeEnum;
+    private final HttpCodeEnum httpCodeEnum;
 
     public CustomException(HttpCodeEnum httpCodeEnum) {
         this.httpCodeEnum = httpCodeEnum;

@@ -5,6 +5,8 @@ import com.xxz.model.common.dtos.ErrorResponseResult;
 import com.xxz.model.common.dtos.ResponseResult;
 import com.xxz.model.common.enums.HttpCodeEnum;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -22,8 +24,7 @@ public class ExceptionCatch {
     @ExceptionHandler(Exception.class)
     @ResponseBody
     public ResponseResult exception(Exception e) {
-        e.printStackTrace();
-        log.error("catch exception:{}", e.getMessage());
+        log.error("catch exception: ", e);
         return ErrorResponseResult.result(HttpCodeEnum.SERVER_ERROR);
     }
 

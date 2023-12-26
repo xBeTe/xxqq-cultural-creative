@@ -2,6 +2,7 @@ package com.xxz.model.common.dtos;
 
 import com.xxz.model.common.enums.HttpCodeEnum;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
 
@@ -9,6 +10,7 @@ import java.io.Serializable;
  * @author xzxie
  * @create 2023/11/6 16:28
  */
+@EqualsAndHashCode(callSuper = true)
 @Data
 public class ErrorResponseResult extends ResponseResult implements Serializable {
 
