@@ -29,9 +29,7 @@ public class LoginUserDetails implements UserDetails {
 
     public LoginUserDetails(UserAccountDO userAccountDO) {
         this.userAccount = userAccountDO;
-        this.authorities = userAccountDO.getPermissions().stream().map(permission -> {
-            return new SimpleGrantedAuthority(permission.getName());
-        }).collect(Collectors.toList());
+        this.authorities = userAccountDO.getPermissions().stream().map(permission -> new SimpleGrantedAuthority(permission.getName())).collect(Collectors.toList());
     }
 
     @Override

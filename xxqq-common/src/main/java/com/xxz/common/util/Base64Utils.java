@@ -17,7 +17,7 @@ import java.net.URL;
 public class Base64Utils {
 
     public static String convertImageToBase64(String imgUrl) throws IOException {
-        URL url = null;
+        URL url;
         InputStream is = null;
         ByteArrayOutputStream outStream = null;
         HttpURLConnection httpUrl = null;
@@ -32,7 +32,7 @@ public class Base64Utils {
             // 创建一个Buffer字符串
             byte[] buffer = new byte[1024];
             // 每次读取的字符串长度，如果为-1，代表全部读取完毕
-            int len = 0;
+            int len;
             // 使用一个输入流从buffer里把数据读取出来
             while ((len = is.read(buffer)) != -1) {
                 // 用输出流往buffer里写入数据，中间参数代表从哪个位置开始读，len代表读取的长度
@@ -66,7 +66,7 @@ public class Base64Utils {
 
 
     public static void main(String[] args) {
-        String base64 = null;
+        String base64;
         try {
             base64 = convertImageToBase64("http://xxz10:9000/xxqq/user/avatar/2023/12/19/bc16fdd049d4408782c02bbc2db69fb9.jpg");
         } catch (IOException e) {

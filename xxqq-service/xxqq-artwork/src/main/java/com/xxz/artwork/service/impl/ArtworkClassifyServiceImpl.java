@@ -4,7 +4,6 @@ import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.xxz.artwork.mapper.ArtworkClassifyMapper;
 import com.xxz.artwork.service.ArtworkClassifyService;
-import com.xxz.model.artwork.dos.ArtworkBaseDO;
 import com.xxz.model.artwork.dos.ArtworkClassifyDO;
 import com.xxz.model.auth.enums.SimpleStatus;
 import com.xxz.model.common.dtos.OkResponseResult;

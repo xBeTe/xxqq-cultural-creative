@@ -14,7 +14,7 @@ public class CustomAccountAuthenticationToken extends AbstractAuthenticationToke
 
     private static final long serialVersionUID = 1L;
     private final Object principal;
-    private Object credentials;
+    private final Object credentials;
 
     public CustomAccountAuthenticationToken(Object credentials, String principal, Collection<? extends GrantedAuthority> authorities) {
         super(authorities);

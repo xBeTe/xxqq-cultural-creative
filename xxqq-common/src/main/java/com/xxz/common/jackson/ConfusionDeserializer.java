@@ -10,8 +10,8 @@ import java.io.IOException;
 
 public class ConfusionDeserializer extends JsonDeserializer<Object> {
 
-    JsonDeserializer<Object>  deserializer = null;
-    JavaType type =null;
+    JsonDeserializer<Object>  deserializer;
+    JavaType type;
 
     public  ConfusionDeserializer(JsonDeserializer<Object> deserializer, JavaType type){
         this.deserializer = deserializer;

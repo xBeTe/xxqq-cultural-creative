@@ -4,7 +4,6 @@ import com.xxz.artwork.service.UploadService;
 import com.xxz.common.constants.ArtworkConstant;
 import com.xxz.common.constants.GatewayConstants;
 import com.xxz.model.artwork.dtos.ArtworkUploadDTO;
-import com.xxz.model.common.dtos.OkResponseResult;
 import com.xxz.model.common.dtos.ResponseResult;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

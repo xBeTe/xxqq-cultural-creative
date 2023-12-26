@@ -2,7 +2,6 @@ package com.xxz.file.service.impl;
 
 
 import com.xxz.file.config.MinIOConfig;
-import com.xxz.file.config.MinIOConfig;
 import com.xxz.file.config.MinIOConfigProperties;
 import com.xxz.file.service.FileStorageService;
 import io.minio.GetObjectArgs;

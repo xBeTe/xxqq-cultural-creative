@@ -10,7 +10,6 @@ import com.xxz.model.common.enums.HttpCodeEnum;
 import io.jsonwebtoken.Claims;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.http.server.reactive.ServerHttpResponse;
 import org.springframework.util.AntPathMatcher;
@@ -33,7 +32,7 @@ public class JwtAuthFilter implements WebFilter {
 
     /**
      * 构造方法，不能将该过滤器注入到容器中，否则在 spring security 中执行一次，在 webflux 中又执行一次
-     * @param jwtUtil
+     * @param jwtUtil jwt 工具类
      */
     public JwtAuthFilter(JwtUtil jwtUtil) {
         this.jwtUtil = jwtUtil;

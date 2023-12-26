@@ -1,7 +1,6 @@
 package com.xxz.auth.service.impl;
 
 import cn.hutool.core.lang.Validator;
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.xxz.auth.mapper.UserAccountMapper;

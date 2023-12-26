@@ -2,15 +2,11 @@ package com.xxz.auth.service.impl;
 
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.xxz.auth.mapper.UserAccountMapper;
-import com.xxz.common.exception.CustomException;
 import com.xxz.model.auth.LoginUserDetails;
 import com.xxz.model.auth.dos.PermissionDO;
 import com.xxz.model.auth.dos.UserAccountDO;
-import com.xxz.model.common.enums.HttpCodeEnum;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.parameters.P;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

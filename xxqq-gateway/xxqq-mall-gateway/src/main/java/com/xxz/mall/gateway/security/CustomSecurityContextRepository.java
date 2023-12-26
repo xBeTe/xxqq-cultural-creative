@@ -10,7 +10,6 @@ import com.xxz.mall.gateway.filter.CustomAccountAuthenticationToken;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.http.server.reactive.ServerHttpResponse;
 import org.springframework.security.core.Authentication;
@@ -40,15 +39,11 @@ public class CustomSecurityContextRepository implements ServerSecurityContextRep
 
 
     @Autowired
-    private JwtUtil jwtUtil;
-
-    @Autowired
     private RedisUtils redisUtils;
 
     @Override
     public Mono<SecurityContext> load(ServerWebExchange exchange) {
         ServerHttpRequest request = exchange.getRequest();
-        ServerHttpResponse response = exchange.getResponse();
 
         List<SimpleGrantedAuthority> authorities;
 

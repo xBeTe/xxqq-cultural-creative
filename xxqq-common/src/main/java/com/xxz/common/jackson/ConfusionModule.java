@@ -28,7 +28,7 @@ public class ConfusionModule extends Module {
 
     /**
      * 注册当前模块
-     * @return
+     * @return ObjectMapper
      */
     public static ObjectMapper registerModule(ObjectMapper objectMapper){
         //CamelCase策略，Java对象属性：personId，序列化后属性：persionId

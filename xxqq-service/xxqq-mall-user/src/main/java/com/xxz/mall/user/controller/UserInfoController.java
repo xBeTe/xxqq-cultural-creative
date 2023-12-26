@@ -3,7 +3,6 @@ package com.xxz.mall.user.controller;
 import com.xxz.common.constants.GatewayConstants;
 import com.xxz.common.constants.UserConstant;
 import com.xxz.mall.user.service.UserInfoService;
-import com.xxz.model.common.dtos.OkResponseResult;
 import com.xxz.model.common.dtos.ResponseResult;
 import com.xxz.model.user.dtos.UserInfoDTO;
 import io.swagger.annotations.Api;

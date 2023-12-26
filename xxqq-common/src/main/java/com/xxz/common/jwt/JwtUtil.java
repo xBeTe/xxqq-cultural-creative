@@ -7,9 +7,7 @@ import io.jsonwebtoken.*;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.context.annotation.Configuration;
 
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
@@ -72,7 +70,7 @@ public class JwtUtil {
      * @return Claims
      */
     public Claims getClaimsBody(String token) {
-        Claims claims = null;
+        Claims claims;
         try {
             claims = Jwts.parser()
                     .setSigningKey(generalKey(jwtProperties.getEncryptKey()))

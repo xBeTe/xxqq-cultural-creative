@@ -2,29 +2,19 @@ package com.xxz.mall.gateway.config;
 
 import com.xxz.common.constants.GatewayConstants;
 import com.xxz.common.jwt.JwtUtil;
-import com.xxz.mall.gateway.filter.CustomAccountAuthenticationToken;
 import com.xxz.mall.gateway.filter.JwtAuthFilter;
 import com.xxz.mall.gateway.security.CustomAuthorizationManager;
 import com.xxz.mall.gateway.security.CustomSecurityContextRepository;
-import org.checkerframework.checker.units.qual.A;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
-import org.springframework.security.authentication.DelegatingReactiveAuthenticationManager;
-import org.springframework.security.authentication.ReactiveAuthenticationManager;
-import org.springframework.security.authentication.ReactiveAuthenticationManagerAdapter;
 import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity;
 import org.springframework.security.config.web.server.SecurityWebFiltersOrder;
 import org.springframework.security.config.web.server.ServerHttpSecurity;
 import org.springframework.security.web.server.SecurityWebFilterChain;
 import org.springframework.security.web.server.ServerAuthenticationEntryPoint;
-import org.springframework.security.web.server.authentication.AuthenticationWebFilter;
-import org.springframework.security.web.server.authentication.ServerAuthenticationConverter;
 import org.springframework.security.web.server.authorization.ServerAccessDeniedHandler;
-
-import java.util.LinkedList;
-import java.util.List;
 
 /**
  * @author xzxie

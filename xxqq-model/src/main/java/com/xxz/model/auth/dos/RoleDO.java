@@ -3,10 +3,12 @@ package com.xxz.model.auth.dos;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.xxz.model.common.dos.BaseDO;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.util.List;
 
 /**
  * @author xzxie

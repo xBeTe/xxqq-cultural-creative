@@ -1,11 +1,9 @@
 package com.xxz.mall.gateway.exception;
 
-import com.xxz.common.constants.GatewayConstants;
 import com.xxz.common.exception.CustomException;
 import com.xxz.common.jwt.JwtUtil;
 import com.xxz.common.util.WebUtils;
 import com.xxz.model.common.dtos.ErrorResponseResult;
-import com.xxz.model.common.dtos.OkResponseResult;
 import com.xxz.model.common.enums.HttpCodeEnum;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +14,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
-import java.util.List;
-
 /**
  * @author xzxie
  * @create 2023/11/18 8:58
@@ -27,9 +23,6 @@ import java.util.List;
 @Order(-1) // 优先级最高，最先执行
 public class ExceptionHandler implements ErrorWebExceptionHandler {
 
-
-    @Autowired
-    private JwtUtil jwtUtil;
 
     @Override
     public Mono<Void> handle(ServerWebExchange exchange, Throwable ex) {

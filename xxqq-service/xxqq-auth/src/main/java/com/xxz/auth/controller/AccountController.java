@@ -1,7 +1,6 @@
 package com.xxz.auth.controller;
 
 import com.xxz.auth.service.AccountService;
-import com.xxz.common.constants.AuthConstants;
 import com.xxz.common.constants.GatewayConstants;
 import com.xxz.model.auth.dtos.LoginUserDTO;
 import com.xxz.model.auth.dtos.RegisterDTO;

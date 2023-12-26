@@ -1,7 +1,5 @@
 package com.xxz.artwork.service.impl;
 
-import com.xxz.artwork.mapper.ArtworkBaseMapper;
-import com.xxz.artwork.mapper.ArtworkContentMapper;
 import com.xxz.artwork.service.ArtworkBaseService;
 import com.xxz.artwork.service.ArtworkContentService;
 import com.xxz.artwork.service.UploadService;
@@ -19,7 +17,6 @@ import lombok.extern.slf4j.Slf4j;
 import net.coobird.thumbnailator.Thumbnails;
 import net.coobird.thumbnailator.geometry.Positions;
 import org.springframework.beans.BeanUtils;
-import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -27,7 +24,10 @@ import org.springframework.util.ResourceUtils;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.imageio.ImageIO;
-import java.io.*;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.time.LocalDateTime;
 import java.util.Objects;
 import java.util.UUID;

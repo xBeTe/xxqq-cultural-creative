@@ -16,7 +16,7 @@ public interface FileStorageService {
      * @param inputStream 文件流
      * @return  文件全路径
      */
-    public String uploadImgFile(String prefix, String filename,InputStream inputStream);
+    String uploadImgFile(String prefix, String filename, InputStream inputStream);
 
     /**
      *  上传html文件
@@ -25,13 +25,13 @@ public interface FileStorageService {
      * @param inputStream  文件流
      * @return  文件全路径
      */
-    public String uploadHtmlFile(String prefix, String filename,InputStream inputStream);
+    String uploadHtmlFile(String prefix, String filename, InputStream inputStream);
 
     /**
      * 删除文件
      * @param pathUrl  文件全路径
      */
-    public void delete(String pathUrl);
+    void delete(String pathUrl);
 
     /**
      * 下载文件
@@ -39,6 +39,6 @@ public interface FileStorageService {
      * @return 文件字节码
      *
      */
-    public byte[]  downLoadFile(String pathUrl);
+    byte[]  downLoadFile(String pathUrl);
 
 }
