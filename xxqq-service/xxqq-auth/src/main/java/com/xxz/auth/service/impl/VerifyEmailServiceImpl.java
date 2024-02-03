@@ -88,13 +88,13 @@ public class VerifyEmailServiceImpl implements VerifyEmailService {
             redisUtils.set(key, JSON.toJSONString(cacheDto), MailConstants.MAIL_VERIFICATION_EXPIRE);
         }
 
-        // return mailClient.sendCode(MailVerificationDTO
-        //         .builder()
-        //         .email(email)80
-        //         .code(code)
-        //         .build());
+        return mailClient.sendCode(MailVerificationDTO
+                .builder()
+                .email(email)
+                .code(code)
+                .build());
 
-        return OkResponseResult.result();
+        // return OkResponseResult.result();
     }
 
     @Autowired
